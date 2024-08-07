@@ -10,8 +10,8 @@
       <?php
              include "Include/Navbar.php";
       ?>
-      <div style="height:253px;  width:100%; ">
-    <div>
+      <div style="height:423px;  width:100%; ">
+    <div style="margin-left: 200px; margin-top: 10px; width:1000px; border: 1px solid black; height: 423px; overflow: hidden;border-radius: 10px;" >
     <table class="table">
   <thead >
     <tr>
@@ -19,6 +19,7 @@
       <th scope="col" style="background-color: pink;">EMP Email</th>
       <th scope="col" style="background-color: pink;">Emp Salary</th>
       <th scope="col" style="background-color: pink;">Emp Salary</th>
+      <th scope="col" style="background-color: pink;">Edit | Delete</th>
     </tr>
   </thead>
   <tbody>
@@ -28,7 +29,7 @@
          $result=$con->query($qry);
          while($row=$result->fetch_assoc())
          {
-          echo"<tr>";
+          echo"<tr>";   
                          echo"<td>".$row["empno"]."</td>";
                          echo"<td>".$row["empname"]."</td>";
                          echo"<td>".$row["empemail"]."</td>";
@@ -37,7 +38,7 @@
                              <a href='edit.php?empno=".$row["empno"]."'>
                                 <img src='image/edit.JPEG' height='20' width='20'>
                              </a>
-
+                              ===
                              <a href='delete.php?empno=".$row["empno"]."'>
                                  <img src='image/del.png' height='20' width='20'>
                              </a>  
@@ -52,6 +53,18 @@
 
     </div>
       </div>
+      <?php
+          if(isset($GET["update"]))
+          {
+            echo"<script>";
+            echo"alert('Data Suceesfully updated!')";
+            echo"</script>";
+          }
+      ?>
+
+
+
+
      <?php
              include "Include/footer.php";
       ?>

@@ -21,7 +21,7 @@
       ?>
       <div style="height:413px;  width:100%; ">
 
-         <div style="width: 28%; margin-left: 32%;">
+         <div style="width: 28%; margin-left: 38%;">
            <form action="Search.php" method="post">
            <div class="form-floating mb-1" style="margin-top: 20px;">
              <input type="text" class="form-control" id="floatingInput" placeholder="name@example.com" name="empno">
@@ -30,7 +30,7 @@
              </div>
            </form>
          </div>
-         <div style="height: 305px; border: 2px solid black;">
+         <div style="margin-left: 200px; margin-top: 10px; width:1000px; border: 1px solid black; height: 423px; overflow: hidden;border-radius: 10px; height: 300px;">
          <table class="table">
   <thead >
     <tr>
