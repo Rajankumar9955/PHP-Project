@@ -18,13 +18,13 @@
        
       <div style="margin-left: 430px; margin-top: 80px; height: 300px; width: 500px; border: 1px solid black; border-radius: 20px;">
         <div style="margin-top: 30px; margin-left: 35px;">
-          <?php
+          <?php 
              $con=new mysqli("localhost","root","","empdata");
              $qry="select * from employee where empno=$empno";
              $result=$con->query($qry);
              while($row=$result->fetch_assoc())
              {
-                            echo"<form  action='updatesave.php'>";
+                            echo"<form method='post' action='updatesave.php'>";
                             echo"<table>";
                             echo "<tr>";
                             echo "<td style='margin-top:'10px'> EMP NO : </td>";

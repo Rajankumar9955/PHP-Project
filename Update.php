@@ -61,10 +61,6 @@
             echo"</script>";
           }
       ?>
-
-
-
-
      <?php
              include "Include/footer.php";
       ?>
